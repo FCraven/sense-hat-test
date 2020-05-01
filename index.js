@@ -33,6 +33,7 @@ const cross = [
   O, O, O, O, O, O, O, O,
 ]
 
+matrix.setRotation(180)
 matrix.setPixels(bigX);
 matrix.clear([127, 0, 0])
 
