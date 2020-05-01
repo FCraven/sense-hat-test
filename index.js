@@ -37,4 +37,4 @@ matrix.setPixels(bigX);
 matrix.clear([127, 0, 0])
 
 matrix.setPixels(cross)
-
+matrix.showMessage('Hi Francis Neri! :)')
