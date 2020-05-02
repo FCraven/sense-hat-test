@@ -2,7 +2,7 @@ const matrix = require('node-sense-hat').Leds;
 const imu = require("node-sense-hat").Imu;
 
 const IMU = new imu.IMU();
-
+const i = 10
 const O = [0, 0, 0];
 const X = [255, 0, 0];
 const red = [255, 0, 0]
@@ -36,6 +36,7 @@ const cross = [
   O, O, O, O, O, O, O, O,
 ]
 
+do{
 
 matrix.lowLight = true;
 matrix.setPixels(cross)
@@ -53,10 +54,16 @@ IMU.getValue((err, data) => {
 
   const { temperature, pressure, humidity } = data
 
-  const temperatureString = temperature.toString().slice(0, 4)
-  const pressureString = pressure.toString().slice(0, 4)
-  const humidityString = humidity.toString().slice(0, 4)
+  const temperatureString = temperature.toString().slice(0, 5)
+  const pressureString = pressure.toString().slice(0, 5)
+  const humidityString = humidity.toString().slice(0, 5)
 
 
-  matrix.showMessage(`It is currently ${temperatureString}*. Humidity is ${humidityString}% and pressure is ${pressureString} millibars`, 0.07, [200, 100, 0], [0, 0, 215]);
+  matrix.showMessage(`It is currently ${temperatureString}*. Humidity is ${humidityString}% and pressure is ${pressureString} mbars`, 0.075, [150, 100, 0], [0, 0, 215]);
+
+  matrix.clear(255,0,0)
+ 
+
+
 });
+} while (i>1)
