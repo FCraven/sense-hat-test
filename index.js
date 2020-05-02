@@ -49,27 +49,5 @@ const flashRGB =()=> {
 }
 
 
+flashRGB()
 
-
-const init =()=> {
-
-  flashRGB()
-
-  IMU.getValue((err, data) => {
-    if (err !== null) {
-      console.error("Could not read sensor data: ", err);
-      return;
-    }
-
-    const { temperature, pressure, humidity } = data
-    const temperatureString = temperature.toString().slice(0, 5)
-    const pressureString = pressure.toString().slice(0, 5)
-
-    matrix.showMessage(`${temperatureString}C  Humidity:${Math.round(humidity)}%  Pressure: ${pressureString}mbs`, 0.075, [150, 100, 0], [0, 0, 215]);
-    matrix.clear(255,0,0)
-  });
-}
-
-for(let i = 0; i < 5; i++){
-  init()
-}
