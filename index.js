@@ -1,4 +1,6 @@
 const matrix = require('node-sense-hat').Leds;
+matrix.setRotation(180)
+
 const imu = require("node-sense-hat").Imu;
 
 const IMU = new imu.IMU();
@@ -47,8 +49,6 @@ const flashRed =()=> {
 
 const init =()=> {
 
-  matrix.setRotation(180)
-  matrix.setPixels(cross)
   IMU.getValue((err, data) => {
     if (err !== null) {
       console.error("Could not read sensor data: ", err);
@@ -64,6 +64,4 @@ const init =()=> {
   });
 }
 
-for(let i = 0; i < 5; i++){
-  init()
-}
+init()
