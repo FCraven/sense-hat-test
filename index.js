@@ -40,14 +40,14 @@ const init =()=> {
 
   matrix.lowLight = true;
   matrix.setPixels(cross)
-  matrix.sleep(2)
+  matrix.sleep(0.5)
   matrix.setRotation(180)
   matrix.setPixels(bigX);
-  matrix.sleep(2)
+  matrix.sleep(.5)
   matrix.clear([127, 0, 0])
-  matrix.sleep(2)
+  matrix.sleep(.5)
   matrix.setPixels(cross)
-  matrix.sleep(2)
+  matrix.sleep(.5)
 
   IMU.getValue((err, data) => {
     if (err !== null) {
