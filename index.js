@@ -10,8 +10,8 @@ const green = [0, 255, 0]
 const blue = [0, 0, 255]
 const indigo = [75, 0, 130]
 const violet = [128, 0, 128]
-const grey = [100,100,100]
-const off = [0, 0 , 0]
+const grey = [100, 100, 100]
+const off = [0, 0, 0]
 
 const allColors = [red, orange, yellow, green, blue, indigo, violet]
 
@@ -38,11 +38,11 @@ const rainbow = [
   O, O, O, O, O, O, O, O,
 ]
 
-
-LED.lowLight = true;
+LED.setRotation(180)
+LED.lowLight = false;
 LED.setPixels(rainbow)
 LED.sleep(2)
-LED.clear(100,100,100)
-LED.flashMessage('this is a test', 2, off, grey)
+LED.clear(100, 100, 100)
+LED.flashMessage('this is a test', 0.75, off, grey)
 
 
