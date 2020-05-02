@@ -43,6 +43,6 @@ LED.lowLight = false;
 LED.setPixels(rainbow)
 LED.sleep(2)
 LED.clear(100, 100, 100)
-LED.flashMessage('this is a test', 0.75, off, grey)
+LED.showMessage('this is a test', 0.75, off, grey)
 
 
