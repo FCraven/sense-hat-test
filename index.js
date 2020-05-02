@@ -34,10 +34,10 @@ const cross = [
 ]
 
 matrix.setPixels(cross)
-// matrix.setRotation(180)
-// matrix.setPixels(bigX);
-// matrix.clear([127, 0, 0])
+matrix.setRotation(180)
+matrix.setPixels(bigX);
+matrix.clear([127, 0, 0])
 
-// matrix.setPixels(cross)
-matrix.showMessage('Hi Francis Neri! :)', 0.4, [0,0,0],[0,0,255])
+matrix.setPixels(cross)
+matrix.showMessage('Hi Francis Neri! :)', 0.1, [255,255,255],[0,0,255])
 
