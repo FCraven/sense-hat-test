@@ -47,12 +47,8 @@ const flashRed =()=> {
 
 const init =()=> {
 
-  matrix.setPixels(cross)
-
   matrix.setRotation(180)
-
-  flashRed()
-
+  matrix.setPixels(cross)
   IMU.getValue((err, data) => {
     if (err !== null) {
       console.error("Could not read sensor data: ", err);
