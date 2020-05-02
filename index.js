@@ -1,5 +1,7 @@
 'use strict'
-const LED = require('sense-hat-led').sync;
+const LEDsync = require('sense-hat-led').sync;
+const LEDasync = require('sense-hat-led')
+
 
 const O = [0, 0, 0];
 const X = [255, 0, 0];
@@ -38,11 +40,20 @@ const rainbow = [
   O, O, O, O, O, O, O, O,
 ]
 
-LED.setRotation(180)
-LED.lowLight = false;
-LED.setPixels(rainbow)
-LED.sleep(2)
-LED.clear(100, 100, 100)
-LED.showMessage('this is a test', 0.0675, off, grey)
+LEDsync.setRotation(180)
+LEDsync.lowLight = true;
+LEDsync.setPixels(rainbow)
+LEDsync.sleep(2)
+LEDsync.setRotation(270)
+LEDsync.sleep(2)
+LEDsync.setRotation(0)
+LEDsync.sleep(2)
+LEDsync.setRotation(90)
+LEDsync.sleep(2)
+LEDsync.setRotation(180)
+LEDsync.sleep(2)
+
+LEDsync.clear(100, 100, 100)
+LEDsync.showMessage('this is a test', 0.0675, off, grey)
 
 
