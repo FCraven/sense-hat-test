@@ -39,12 +39,12 @@ const cross = [
 ]
 
 
-const flashRGB =()=> {
+const flashRGB = () => {
   matrix.clear([255, 0, 0]);
+  matrix.sleep(1)
+  matrix.clear([0, 255, 0])
   setTimeout(matrix.clear, 500);
-  matrix.clear([0,255,0])
-  setTimeout(matrix.clear, 500);
-  matrix.clear([0,0,255])
+  matrix.clear([0, 0, 255])
   setTimeout(matrix.clear, 500);
 }
 
