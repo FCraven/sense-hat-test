@@ -36,18 +36,25 @@ const cross = [
   O, O, O, O, O, O, O, O,
 ]
 
+
+function flashRed(){
+  matrix.clear([255, 0, 0]);
+  setTimeout(matrix.clear, 100);
+}
+
+
 const init =()=> {
 
   matrix.lowLight = true;
   matrix.setPixels(cross)
-  matrix.sleep(0.5)
+  flashRed()
   matrix.setRotation(180)
   matrix.setPixels(bigX);
-  matrix.sleep(.5)
+  flashRed()
   matrix.clear([127, 0, 0])
-  matrix.sleep(.5)
+  flashRed()
   matrix.setPixels(cross)
-  matrix.sleep(.5)
+  flashRed()
 
   IMU.getValue((err, data) => {
     if (err !== null) {
