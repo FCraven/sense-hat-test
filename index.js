@@ -29,6 +29,18 @@ const bigX = [
   X, O, O, O, O, O, O, X,
 ];
 
+const smiley = [
+  O, O, O, O, O, O, O, O,
+  O, O, O, O, O, O, O, O,
+  O, O, X, O, O, X, O, O,
+  O, O, O, O, O, O, O, O,
+  O, O, O, X, X, O, O, O,
+  O, X, O, O, O, O, X, O,
+  O, O, X, X, X, X, O, O,
+  O, O, O, O, O, O, O, O,
+];
+
+
 const rainbow = [
   red, red, red, red, red, red, red, red,
   orange, orange, orange, orange, orange, orange, orange, orange,
@@ -42,7 +54,9 @@ const rainbow = [
 
 LEDsync.setRotation(180)
 LEDsync.lowLight = true;
+
 LEDsync.setPixels(rainbow)
+LEDsync.setPixels(smiley)
 LEDsync.sleep(2)
 LEDsync.setRotation(270)
 LEDsync.sleep(2)
@@ -52,6 +66,7 @@ LEDsync.setRotation(90)
 LEDsync.sleep(2)
 LEDsync.setRotation(180)
 LEDsync.sleep(2)
+
 
 LEDsync.clear(100, 100, 100)
 LEDsync.showMessage('this is a test', 0.0675, off, grey)
