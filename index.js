@@ -1,5 +1,5 @@
 'use strict'
-const LED = require('sense-hat-led')
+const LED = require('sense-hat-led').sync;
 
 const O = [0, 0, 0];
 const X = [255, 0, 0];
@@ -35,3 +35,12 @@ const rainbow = [
 ]
 
 LED.setPixels(rainbow)
+LED.sleep(1)
+LED.setRotation(90)
+LED.sleep(1)
+LED.setRotation(180)
+LED.sleep(1)
+LED.setRotation(270)
+LED.sleep(1)
+LED.setRotation(0)
+
