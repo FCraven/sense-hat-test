@@ -23,13 +23,13 @@ const bigX = [
 ];
 
 const cross = [
-  [red, red, red, red, red, red, red, red],
-  [orange, orange, orange, orange, orange, orange, orange, orange],
-  [yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow],
-  [green, green, green, green, green, green, green, green],
-  [blue, blue, blue, blue, blue, blue, blue, blue],
-  [indigo, indigo, indigo, indigo, indigo, indigo, indigo, indigo],
-  [violet, violet, violet, violet, violet, violet, violet, violet],
+  red, red, red, red, red, red, red, red,
+  orange, orange, orange, orange, orange, orange, orange, orange,
+  yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow,
+  green, green, green, green, green, green, green, green,
+  blue, blue, blue, blue, blue, blue, blue, blue,
+  indigo, indigo, indigo, indigo, indigo, indigo, indigo, indigo,
+  violet, violet, violet, violet, violet, violet, violet, violet,
   O, O, O, O, O, O, O, O,
 ]
 
@@ -39,5 +39,5 @@ matrix.setPixels(cross)
 // matrix.clear([127, 0, 0])
 
 // matrix.setPixels(cross)
-// matrix.showMessage('Hi Francis Neri! :)')
+matrix.showMessage('Hi Francis Neri! :)', 0.4, [0,0,0],[0,0,255])
 
