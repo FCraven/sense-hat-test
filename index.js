@@ -1,4 +1,7 @@
 const matrix = require('node-sense-hat').Leds;
+const imu = require("node-sense-hat").Imu;
+
+const IMU = new imu.IMU();
 
 const O = [0, 0, 0];
 const X = [255, 0, 0];
@@ -33,11 +36,22 @@ const cross = [
   O, O, O, O, O, O, O, O,
 ]
 
+
+matrix.lowLight = true;
 matrix.setPixels(cross)
 matrix.setRotation(180)
 matrix.setPixels(bigX);
 matrix.clear([127, 0, 0])
 
 matrix.setPixels(cross)
-matrix.showMessage('Hi Francis Neri! :)', 0.1, [255,255,255],[0,0,255])
 
+IMU.getValue((err, data) => {
+  if (err !== null) {
+    console.error("Could not read sensor data: ", err);
+    return;
+  }
+
+  const { temperature, pressure, humidity } = data
+
+  matrix.showMessage(`It is currently ${temperature}*. Humidity is ${humidity}% and pressure is ${pressure}`,0.9,[100,100,255],[0,0,185]);
+});
