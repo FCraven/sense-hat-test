@@ -70,5 +70,5 @@ LEDsync.sleep(2)
 
 LEDsync.clear(100, 100, 100)
 LEDsync.showMessage('this is a test', 0.0675, off, grey)
-
+LEDsync.clear()
 
