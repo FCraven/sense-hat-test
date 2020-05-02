@@ -11,6 +11,8 @@ const blue = [0, 0, 255]
 const indigo = [75, 0, 130]
 const violet = [128, 0, 128]
 
+const allColors = [red, orange, yellow, green, blue, indigo, violet]
+
 
 const bigX = [
   X, O, O, O, O, O, O, X,
@@ -34,13 +36,9 @@ const rainbow = [
   O, O, O, O, O, O, O, O,
 ]
 
+
+LED.lowLight = true;
 LED.setPixels(rainbow)
-LED.sleep(1)
-LED.setRotation(90)
-LED.sleep(1)
-LED.setRotation(180)
-LED.sleep(1)
-LED.setRotation(270)
-LED.sleep(1)
-LED.setRotation(0)
+LED.sleep(2)
+
 
