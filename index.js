@@ -2,7 +2,7 @@ const matrix = require('node-sense-hat').Leds;
 const imu = require("node-sense-hat").Imu;
 
 const IMU = new imu.IMU();
-const i = 10
+
 const O = [0, 0, 0];
 const X = [255, 0, 0];
 const red = [255, 0, 0]
@@ -63,4 +63,8 @@ const init =()=> {
     matrix.showMessage(`It is currently ${temperatureString}*. Humidity is ${humidityString}% and pressure is ${pressureString} mbars`, 0.075, [150, 100, 0], [0, 0, 215]);
     matrix.clear(255,0,0)
   });
+}
+
+for(let i = 0; i < 10; i++) {
+  init()
 }
