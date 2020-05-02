@@ -53,10 +53,10 @@ IMU.getValue((err, data) => {
 
   const { temperature, pressure, humidity } = data
 
-  const temperatureString = temperature.toString().slice(0,4)
-  const pressureString = pressure.toString()
-  const humidityString = humidity.toString().slice(0,4)
+  const temperatureString = temperature.toString().slice(0, 4)
+  const pressureString = pressure.toString().slice(0, 4)
+  const humidityString = humidity.toString().slice(0, 4)
 
 
-  matrix.showMessage(`It is currently ${temperatureString}*. Humidity is ${humidityString}% and pressure is ${pressureString} millibars`, 0.07, [100, 100, 0], [0, 0, 215]);
+  matrix.showMessage(`It is currently ${temperatureString}*. Humidity is ${humidityString}% and pressure is ${pressureString} millibars`, 0.07, [200, 100, 0], [0, 0, 215]);
 });
