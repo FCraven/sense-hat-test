@@ -39,15 +39,21 @@ const cross = [
 ]
 
 
-const flashRed =()=> {
+const flashRGB =()=> {
   matrix.clear([255, 0, 0]);
-  setTimeout(matrix.clear, 100);
+  setTimeout(matrix.clear, 500);
+  matrix.clear([0,255,0])
+  setTimeout(matrix.clear, 500);
+  matrix.clear([0,0,255])
+  setTimeout(matrix.clear, 500);
 }
 
 
 
 
 const init =()=> {
+
+  flashRGB()
 
   IMU.getValue((err, data) => {
     if (err !== null) {
@@ -64,4 +70,6 @@ const init =()=> {
   });
 }
 
-init()
+for(let i = 0; i < 5; i++){
+  init()
+}
