@@ -1,8 +1,5 @@
-const matrix = require('node-sense-hat').Leds;
-matrix.setRotation(180)
-
-const imu = require("node-sense-hat").Imu;
-
+'use strict'
+const LED = require('sense-hat-led')
 const IMU = new imu.IMU();
 
 const O = [0, 0, 0];
@@ -27,7 +24,7 @@ const bigX = [
   X, O, O, O, O, O, O, X,
 ];
 
-const cross = [
+const rainbow = [
   red, red, red, red, red, red, red, red,
   orange, orange, orange, orange, orange, orange, orange, orange,
   yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow,
@@ -38,16 +35,4 @@ const cross = [
   O, O, O, O, O, O, O, O,
 ]
 
-
-const flashRGB = () => {
-  matrix.clear([255, 0, 0]);
-  matrix.sleep(1)
-  matrix.clear([0, 255, 0])
-  setTimeout(matrix.clear, 500);
-  matrix.clear([0, 0, 255])
-  setTimeout(matrix.clear, 500);
-}
-
-
-flashRGB()
-
+LED.setPixels(rainbow)
