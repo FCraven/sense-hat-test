@@ -1,6 +1,5 @@
 'use strict'
 const LED = require('sense-hat-led')
-const IMU = new imu.IMU();
 
 const O = [0, 0, 0];
 const X = [255, 0, 0];
