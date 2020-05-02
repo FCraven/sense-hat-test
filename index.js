@@ -36,34 +36,31 @@ const cross = [
   O, O, O, O, O, O, O, O,
 ]
 
-do{
+const init =()=> {
 
-matrix.lowLight = true;
-matrix.setPixels(cross)
-matrix.setRotation(180)
-matrix.setPixels(bigX);
-matrix.clear([127, 0, 0])
+  matrix.lowLight = true;
+  matrix.setPixels(cross)
+  matrix.sleep(2)
+  matrix.setRotation(180)
+  matrix.setPixels(bigX);
+  matrix.sleep(2)
+  matrix.clear([127, 0, 0])
+  matrix.sleep(2)
+  matrix.setPixels(cross)
+  matrix.sleep(2)
 
-matrix.setPixels(cross)
+  IMU.getValue((err, data) => {
+    if (err !== null) {
+      console.error("Could not read sensor data: ", err);
+      return;
+    }
 
-IMU.getValue((err, data) => {
-  if (err !== null) {
-    console.error("Could not read sensor data: ", err);
-    return;
-  }
+    const { temperature, pressure, humidity } = data
+    const temperatureString = temperature.toString().slice(0, 5)
+    const pressureString = pressure.toString().slice(0, 5)
+    const humidityString = humidity.toString().slice(0, 5)
 
-  const { temperature, pressure, humidity } = data
-
-  const temperatureString = temperature.toString().slice(0, 5)
-  const pressureString = pressure.toString().slice(0, 5)
-  const humidityString = humidity.toString().slice(0, 5)
-
-
-  matrix.showMessage(`It is currently ${temperatureString}*. Humidity is ${humidityString}% and pressure is ${pressureString} mbars`, 0.075, [150, 100, 0], [0, 0, 215]);
-
-  matrix.clear(255,0,0)
- 
-
-
-});
-} while (i>1)
+    matrix.showMessage(`It is currently ${temperatureString}*. Humidity is ${humidityString}% and pressure is ${pressureString} mbars`, 0.075, [150, 100, 0], [0, 0, 215]);
+    matrix.clear(255,0,0)
+  });
+}
