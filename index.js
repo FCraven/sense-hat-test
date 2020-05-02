@@ -40,5 +40,6 @@ const rainbow = [
 LED.lowLight = true;
 LED.setPixels(rainbow)
 LED.sleep(2)
+LED.clear(100,100,100)
 
 
