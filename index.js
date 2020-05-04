@@ -98,6 +98,8 @@ const smileyFace = [
 // LED.showMessage('this is a test', 0.0675, off, grey)
 // LED.clear()
 
+
+LED.setRotation(180)
 LED.setPixels(smileyFace)
 LED.sleep(5)
 
