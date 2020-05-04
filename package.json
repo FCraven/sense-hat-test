@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node-raspistill": "^1.0.1",
     "node-sense-hat": "0.0.2",
     "sense-hat-led": "^1.2.0"
   }

@@ -1,6 +1,15 @@
 'use strict'
-const LEDsync = require('sense-hat-led').sync;
-const LEDasync = require('sense-hat-led')
+const LED = require('sense-hat-led').sync;
+const Raspistill = require('node-raspistill').Raspistill;
+const camera = new Raspistill();
+
+
+LED.clear(255,255,255)
+camera.takePhoto().then((photo) => {
+    console.log(photo)
+});
+
+LED.clear()
 
 
 const O = [0, 0, 0];
@@ -52,23 +61,25 @@ const rainbow = [
   O, O, O, O, O, O, O, O,
 ]
 
-LEDsync.setRotation(180)
-LEDsync.lowLight = true;
+LED.setRotation(180)
+LED.lowLight = true;
 
-LEDsync.setPixels(rainbow)
-LEDsync.setPixels(smiley)
-LEDsync.sleep(2)
-LEDsync.setRotation(270)
-LEDsync.sleep(2)
-LEDsync.setRotation(0)
-LEDsync.sleep(2)
-LEDsync.setRotation(90)
-LEDsync.sleep(2)
-LEDsync.setRotation(180)
-LEDsync.sleep(2)
+LED.setPixels(rainbow)
+LED.sleep(2)
+LED.setPixels(smiley)
+LED.sleep(2)
+LED.setRotation(270)
+LED.sleep(2)
+LED.setRotation(0)
+LED.sleep(2)
+LED.setRotation(90)
+LED.sleep(2)
+LED.setRotation(180)
+LED.sleep(2)
 
 
-LEDsync.clear(100, 100, 100)
-LEDsync.showMessage('this is a test', 0.0675, off, grey)
-LEDsync.clear()
+LED.clear(100, 100, 100)
+LED.showMessage('this is a test', 0.0675, off, grey)
+LED.clear()
+
 
