@@ -28,7 +28,7 @@ const smileyFace = [
 // LED.clear()
 
 
-// const O = [0, 0, 0];
+const O = [0, 0, 0];
 // const X = [255, 0, 0];
 // const red = [255, 0, 0]
 // const orange = [255, 165, 0];
