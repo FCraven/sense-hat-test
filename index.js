@@ -4,6 +4,18 @@ const Raspistill = require('node-raspistill').Raspistill;
 const camera = new Raspistill();
 
 
+const smileyFace = [
+  O, O, O, O, O, O, O, O,
+  O, O, yellow, yellow, yellow, yellow, O, O,
+  O, yellow, yellow, yellow, yellow, yellow, yellow, O,
+  yellow, O, O, yellow, yellow, O, O, yellow,
+  yellow, O, O, yellow, yellow, O, O, yellow,
+  yellow, O, yellow, yellow, yellow, yellow, O, yellow,
+  O, yellow, O, O, O, O, yellow, O,
+  O, O, yellow, yellow, yellow, yellow, O, O,
+]
+
+
 // LED.clear(255, 255, 255)
 // for (let i = 3; i < 0; i--) {
 //   LED.flashMessage(`${i}`)
@@ -20,7 +32,7 @@ const camera = new Raspistill();
 // const X = [255, 0, 0];
 // const red = [255, 0, 0]
 // const orange = [255, 165, 0];
-// const yellow = [255, 215, 0]
+const yellow = [255, 215, 0]
 // const green = [0, 255, 0]
 // const blue = [0, 0, 255]
 // const indigo = [75, 0, 130]
@@ -87,4 +99,9 @@ const camera = new Raspistill();
 // LED.clear()
 
 
+
+
+
+
 LED.clear(0, 0, 255)
+
