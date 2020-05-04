@@ -4,16 +4,6 @@ const Raspistill = require('node-raspistill').Raspistill;
 const camera = new Raspistill();
 
 
-const smileyFace = [
-  O, O, O, O, O, O, O, O,
-  O, O, yellow, yellow, yellow, yellow, O, O,
-  O, yellow, yellow, yellow, yellow, yellow, yellow, O,
-  yellow, O, O, yellow, yellow, O, O, yellow,
-  yellow, O, O, yellow, yellow, O, O, yellow,
-  yellow, O, yellow, yellow, yellow, yellow, O, yellow,
-  O, yellow, O, O, O, O, yellow, O,
-  O, O, yellow, yellow, yellow, yellow, O, O,
-]
 
 
 // LED.clear(255, 255, 255)
@@ -77,6 +67,16 @@ const yellow = [255, 215, 0]
 //   O, O, O, O, O, O, O, O,
 // ]
 
+const smileyFace = [
+  O, O, O, O, O, O, O, O,
+  O, O, yellow, yellow, yellow, yellow, O, O,
+  O, yellow, yellow, yellow, yellow, yellow, yellow, O,
+  yellow, O, O, yellow, yellow, O, O, yellow,
+  yellow, O, O, yellow, yellow, O, O, yellow,
+  yellow, O, yellow, yellow, yellow, yellow, O, yellow,
+  O, yellow, O, O, O, O, yellow, O,
+  O, O, yellow, yellow, yellow, yellow, O, O,
+]
 // LED.setRotation(180)
 // LED.lowLight = true;
 
@@ -98,6 +98,8 @@ const yellow = [255, 215, 0]
 // LED.showMessage('this is a test', 0.0675, off, grey)
 // LED.clear()
 
+LED.setPixels(smileyFace)
+LED.sleep(5)
 
 
 
