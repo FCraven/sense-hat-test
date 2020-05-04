@@ -4,12 +4,13 @@ const Raspistill = require('node-raspistill').Raspistill;
 const camera = new Raspistill();
 
 
-LED.clear(255,255,255)
-for(let i = 3; i < 0; i--){
+LED.clear(255, 255, 255)
+for (let i = 3; i < 0; i--) {
   LED.flashMessage(`${i}`)
 }
 camera.takePhoto().then((photo) => {
-    console.log(photo)
+  console.log('took photo --->', photo)
+
 });
 
 LED.clear()
