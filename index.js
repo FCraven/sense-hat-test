@@ -78,20 +78,23 @@ const smileyFace = [
   O, O, yellow, yellow, yellow, yellow, O, O,
 ]
 // LED.setRotation(180)
-// LED.lowLight = true;
 
-// LED.setPixels(rainbow)
-// LED.sleep(2)
-// LED.setPixels(smiley)
-// LED.sleep(2)
-// LED.setRotation(270)
-// LED.sleep(2)
-// LED.setRotation(0)
-// LED.sleep(2)
-// LED.setRotation(90)
-// LED.sleep(2)
-// LED.setRotation(180)
-// LED.sleep(2)
+
+
+LED.lowLight = true;
+
+LED.setPixels(rainbow)
+LED.sleep(2)
+LED.setPixels(smiley)
+LED.sleep(2)
+LED.setRotation(270)
+LED.sleep(2)
+LED.setRotation(0)
+LED.sleep(2)
+LED.setRotation(90)
+LED.sleep(2)
+LED.setRotation(180)
+LED.sleep(2)
 
 
 // LED.clear(100, 100, 100)
@@ -99,13 +102,13 @@ const smileyFace = [
 // LED.clear()
 
 
-LED.setRotation(180)
-LED.setPixels(smileyFace)
-LED.sleep(5)
+// LED.setRotation(180)
+// LED.setPixels(smileyFace)
+// LED.sleep(5)
 
 
 
 
 
-LED.clear(0, 0, 255)
+LED.clear(100,100, 100)
 
